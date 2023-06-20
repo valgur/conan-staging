@@ -26,6 +26,12 @@ jobs:
           - { version: "10",  dockerimage: "conanio/clang10", buildType: "Release" }
           - { version: "11",  dockerimage: "conanio/clang11", buildType: "Debug"   }
           - { version: "11",  dockerimage: "conanio/clang11", buildType: "Release" }
+          - { version: "12",  dockerimage: "conanio/clang12-ubuntu16.04", buildType: "Debug" }
+          - { version: "12",  dockerimage: "conanio/clang12-ubuntu16.04", buildType: "Release" }
+          - { version: "13",  dockerimage: "conanio/clang13-ubuntu16.04", buildType: "Debug" }
+          - { version: "13",  dockerimage: "conanio/clang13-ubuntu16.04", buildType: "Release" }
+          - { version: "14",  dockerimage: "conanio/clang14-ubuntu16.04", buildType: "Debug" }
+          - { version: "14",  dockerimage: "conanio/clang14-ubuntu16.04", buildType: "Release" }
     name: CLANG ${{ matrix.compiler.version }} ${{ matrix.compiler.buildType }}
     steps:
       - uses: actions/checkout@v2

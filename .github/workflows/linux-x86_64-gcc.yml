@@ -22,8 +22,12 @@ jobs:
           - { version: "9",   dockerimage: "conanio/gcc9",  buildType: "Release" }
           - { version: "10",  dockerimage: "conanio/gcc10", buildType: "Debug"   }
           - { version: "10",  dockerimage: "conanio/gcc10", buildType: "Release" }
-          - { version: "11",  dockerimage: "conanio/gcc11", buildType: "Debug"   }
-          - { version: "11",  dockerimage: "conanio/gcc11", buildType: "Release" }
+          - { version: "11",  dockerimage: "conanio/gcc11-ubuntu16.04", buildType: "Debug"   }
+          - { version: "11",  dockerimage: "conanio/gcc11-ubuntu16.04", buildType: "Release" }
+          - { version: "12",  dockerimage: "conanio/gcc12-ubuntu16.04", buildType: "Debug"   }
+          - { version: "12",  dockerimage: "conanio/gcc12-ubuntu16.04", buildType: "Release" }
+          - { version: "13",  dockerimage: "conanio/gcc13-ubuntu16.04", buildType: "Debug"   }
+          - { version: "13",  dockerimage: "conanio/gcc13-ubuntu16.04", buildType: "Release" }
     name: GCC ${{ matrix.compiler.version }} ${{ matrix.compiler.buildType }}
     steps:
       - uses: actions/checkout@v2
