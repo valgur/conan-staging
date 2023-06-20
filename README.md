@@ -10,7 +10,3 @@
 | macOS x86_64 | macOS x86_64 | Apple clang | [![macOS x86_64 Apple clang](https://github.com/valgur/conan-staging/actions/workflows/macos-x86_64-appleclang.yml/badge.svg?branch=testing%2F3.1.0)](https://github.com/valgur/conan-staging/actions/workflows/macos-x86_64-appleclang.yml?query=branch%3Atesting%2F3.1.0) |
 | macOS x86_64 | macOS M1 | Apple clang | [![macOS x86_64 to macOS M1 Apple clang](https://github.com/valgur/conan-staging/actions/workflows/macos-x86_64-macos-m1-appleclang.yml/badge.svg?branch=testing%2F3.1.0)](https://github.com/valgur/conan-staging/actions/workflows/macos-x86_64-macos-m1-appleclang.yml?query=branch%3Atesting%2F3.1.0) |
 | macOS x86_64 | iOS 12.0 armv8 | Apple clang | [![macOS x86_64 to iOS 12.0 armv8 Apple clang](https://github.com/valgur/conan-staging/actions/workflows/macos-x86_64-ios12.0-armv8-appleclang.yml/badge.svg?branch=testing%2F3.1.0)](https://github.com/valgur/conan-staging/actions/workflows/macos-x86_64-ios12.0-armv8-appleclang.yml?query=branch%3Atesting%2F3.1.0) |
-
-## Description
-
-[Conan.io](https://conan.io) package for [Mapnik](https://mapnik.org).

@@ -29,15 +29,14 @@ def has_shared_option(recipe_path):
     return options and "shared" in options
 
 if __name__ == "__main__":
-    username = "SpaceIm"
     recipe_path = os.path.abspath("conanfile.py")
     recipe_name = inspect_value_from_recipe(attribute="name", recipe_path=recipe_path)
     channel, recipe_version = get_repo_branch_from_githubaction().split("/")
-    reference = "{}/{}@{}/{}".format(recipe_name, recipe_version, username, channel)
+    reference = "{}/{}".format(recipe_name, recipe_version)
     shared_option_name = "{}:shared".format(recipe_name) if has_shared_option(recipe_path) else None
 
-    builder = ConanMultiPackager(username=username, channel=channel,
-                                 build_policy="missing", skip_check_credentials=True)
+    builder = ConanMultiPackager(build_policy="missing", skip_check_credentials=True,
+                                 docker_run_options="-u 0:0")
     builder.add_common_builds(shared_option_name=shared_option_name, pure_c=False, dll_with_static_runtime=True,
                               reference=reference, build_all_options_values=None)
     builder.run()
